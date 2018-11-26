@@ -1,0 +1,34 @@
+<div class="container">
+<div>
+<div class="form-group">
+  <label class="control-label">Nom :</label>
+  <input class="form-control" type="text" [(ngModel)]="event.nom" />
+</div>
+<div class="form-group">
+  <label class="control-label">equipe1 :</label>
+  <input class="form-control" type="text" [(ngModel)]="event.equipe1" />
+</div>
+<div class="form-group">
+  <label class="control-label">equipe2 :</label>
+  <input class="form-control" type="text" [(ngModel)]="event.equipe2" />
+</div>
+<div class="form-group">
+  <label class="control-label">date_debut :</label>
+  <input class="form-control" type="date" [(ngModel)]="event.date_debut" />
+</div>
+<div class="form-group">
+  <label class="control-label">date_fin :</label>
+  <input class="form-control" type="date" [(ngModel)]="event.date_fin" />
+</div>
+<div class="form-group">
+  <label class="control-label">description :</label>
+  <input class="form-control" type="text" [(ngModel)]="event.description" />
+</div>
+<div class="form-group">
+  <label class="control-label">prix :</label>
+  <input class="form-control" type="text" [(ngModel)]="event.prix" />
+</div>
+<button class="btn btn-primary" (click)="saveEvent()">Ajouter</button>
+</div>
+</div>
+ 

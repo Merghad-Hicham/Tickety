@@ -1,0 +1,36 @@
+<div class="container">
+<div class="panel panel-primary">
+<!--  <div class="form-group">
+  <label>Date de recherche</label>
+
+  <input  type="date" [(ngModel)]="dateCle"/>
+  <button class="btn btn-primary" (click)="chercher()">chercher</button>
+
+</div>
+--><button routerLink="/newEntrainemet" class="btn btn-primary">Nouvelle Entrainement</button>
+  <div class="panel-heading"><h2>les list des entrainements</h2></div>
+  <div class="panel-body">
+
+
+    <table class="table table-striped">
+      <tr>
+        <th>type</th><th>ID</th><th>nom</th><th>equipe</th><th>date debut</th><th>date fin</th>
+        <th>Description</th><th>equipe</th><th>Prix</th><th>Activite</th>
+      </tr>
+      <tr *ngFor="let e of pageEvent">
+        <td>{{e.type}}</td><td>{{e.id}}</td><td>{{e.nom}}</td><td>{{e.equipe}}</td>
+        <td>{{e.date_debut}}</td><td>{{e.date_fin}}</td><td>{{e.description}}</td><td>{{e.equipe}}</td><td>{{e.prix}}</td>
+        <td>
+          <button class="btn btn-primary">Modifier</button>
+          <button class="btn btn-danger">Supprimer</button>
+        </td>
+
+      </tr>
+
+
+    </table>
+
+
+   </div>
+</div>
+</div>
