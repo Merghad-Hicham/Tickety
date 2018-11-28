@@ -1,26 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+
 import { HttpModule } from '@angular/http';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map' ;
 import {ServicesService} from '../services.service';
-@Component({
-  selector: 'app-entrainement',
-  templateUrl: './entrainement.component.html',
-  styleUrls: ['./entrainement.component.css']
-})
-export class EntrainementComponent implements OnInit {
 
-  pageEntrainement: any;
+@Component({
+  selector: 'app-activite',
+  templateUrl: './activite.component.html',
+  styleUrls: ['./activite.component.css']
+})
+export class ActiviteComponent implements OnInit {
+
+  pageActivite: any;
   dateCle: Date;
   constructor( public eventServices: ServicesService) { }
+
 
   ngOnInit() {
     this.doSherch();
    }
   doSherch () {
-    this.eventServices.getEntrainement ()
+    this.eventServices.getActivete ()
       .subscribe(data => {
-          this.pageEntrainement = data;
+          this.pageActivite = data;
         }, err => {
           console.log(err);
         }
@@ -30,5 +33,4 @@ export class EntrainementComponent implements OnInit {
   chercher() {
 
   }
-
 }

@@ -14,10 +14,12 @@ import { EntrainementComponent } from './entrainement/entrainement.component';
 import { NewEntrainementComponent } from './new-entrainement/new-entrainement.component';
 import { NewMatchsComponent } from './new-matchs/new-matchs.component';
 import { Event } from './model/model.Event';
+import { ActiviteComponent } from './activite/activite.component';
 
 const appRoutes: Routes = [
 {path: 'about', component: AboutComponent},
 {path: 'match', component: MatchsComponent},
+  {path: 'activite', component: ActiviteComponent},
 {path: 'entrainemet', component: EntrainementComponent},
 {path: 'events', component: EventsComponent},
 {path: 'newEvents', component: NewEventComponent},
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     MatchsComponent,
     EntrainementComponent,
     NewEntrainementComponent,
-    NewMatchsComponent
+    NewMatchsComponent,
+    ActiviteComponent
   ],
   imports: [
     BrowserModule,

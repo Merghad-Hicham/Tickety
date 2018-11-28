@@ -7,19 +7,19 @@
   <button class="btn btn-primary" (click)="chercher()">chercher</button>
 
 </div>
---><button routerLink="/newMatch" class="btn btn-primary">Nouveau Match</button>
+--><button routerLink="/newActivite" class="btn btn-primary">Nouvelle Activité</button>
   <div class="panel-heading"><h2>les list des matchs</h2></div>
   <div class="panel-body">
 
 
     <table class="table table-striped">
       <tr>
-        <th>type</th><th>ID</th><th>nom</th><th>equipe1</th><th>equipe2</th><th>date debut</th><th>date fin</th>
-        <th>Description</th><th>equipe</th><th>Prix</th><th>Activite</th>
+        <th>type</th><th>ID</th><th>nom</th><th>date debut</th><th>date fin</th>
+        <th>Description</th><th>Prix</th><th>Activite</th>
       </tr>
-      <tr *ngFor="let e of matchEvent">
-        <td>{{e.type}}</td><td>{{e.id}}</td><td>{{e.nom}}</td><td>{{e.equipe1}}</td><td>{{e.equipe2}}</td>
-        <td>{{e.date_debut}}</td><td>{{e.date_fin}}</td><td>{{e.description}}</td><td>{{e.equipe}}</td><td>{{e.prix}}</td>
+      <tr *ngFor="let e of pageActivite">
+        <td>{{e.type}}</td><td>{{e.id}}</td><td>{{e.nom}}</td>
+        <td>{{e.date_debut}}</td><td>{{e.date_fin}}</td><td>{{e.description}}</td><td>{{e.prix}}</td>
         <td>
           <button class="btn btn-primary">Modifier</button>
           <button class="btn btn-danger">Supprimer</button>
@@ -34,3 +34,4 @@
    </div>
 </div>
 </div>
+

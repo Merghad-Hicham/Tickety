@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@DiscriminatorValue("AV")
+@DiscriminatorValue("AC")
 public class Activite extends Event{
 
     private String theme;

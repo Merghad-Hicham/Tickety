@@ -14,7 +14,20 @@ export class ServicesService {
       .map(resp => resp.json()) ;
 }
     getMatch() {
-    return this.http.get('http://localhost:8091/events/{2}')
+      return this.http.get('http://localhost:8091/match')
+        .map(resp => resp.json());
+    }
+   getEntrainement() {
+    return this.http.get( 'http://localhost:8091/entrainemet')
+      .map(resp => resp.json());
+}
+
+   getActivete() {
+    return this.http.get('http://localhost:8091/activete')
+      .map(resp => resp.json()) ;
+}
+   getEventDate(date: Date) {
+    return this.http.get('http://localhost:8091/eventsDate/date')
       .map(resp => resp.json()) ;
 }
   saveEvent(event: Event) {
