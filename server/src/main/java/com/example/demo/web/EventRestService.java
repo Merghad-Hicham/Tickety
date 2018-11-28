@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -43,7 +43,7 @@ public class EventRestService {
 		return eventMetier.supprimEvent(id);
 	}
     @RequestMapping(value = "/eventsDate/{s}", method = RequestMethod.GET)
-	public List<Event> chercherparDate(@PathVariable Date s) {
+	public List<Event> chercherparDate(@PathVariable @DateTimeFormat(pattern="yyyy-MM-dd") Date s) {
 		return eventMetier.chercherparDate(s);
 	}
     @RequestMapping(value = "/match/{s}", method = RequestMethod.GET)
