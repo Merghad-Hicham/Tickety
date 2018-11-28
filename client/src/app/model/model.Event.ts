@@ -1,6 +1,7 @@
 export class Event {
   type: string;
   nom: string;
+  theme: string;
   equipe1: string;
   equipe2: string;
   equipe: string;
