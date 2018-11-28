@@ -34,7 +34,6 @@ public abstract class Event implements Serializable {
 
     private String description;
 
-    @Column(nullable = false)
     private Double prix;
 
     @Column(nullable = false)

@@ -46,9 +46,17 @@ public class EventRestService {
 	public List<Event> chercherparDate(@PathVariable @DateTimeFormat(pattern="yyyy-MM-dd") Date s) {
 		return eventMetier.chercherparDate(s);
 	}
-    @RequestMapping(value = "/match/{s}", method = RequestMethod.GET)
-	public List<Event> getMatch(String s) {
-		return eventMetier.getMatch(s);
+    @RequestMapping(value = "/match", method = RequestMethod.GET)
+	public List<Event> getMatch() {
+		return eventMetier.getMatch();
+	}
+    @RequestMapping(value = "/entrainemet", method = RequestMethod.GET)
+	public List<Event> getEntrainement() {
+		return eventMetier.getEntrainement();
+	}
+    @RequestMapping(value = "/activete", method = RequestMethod.GET)
+	public List<Event> getActivete() {
+		return eventMetier.getActivete();
 	}
 
    

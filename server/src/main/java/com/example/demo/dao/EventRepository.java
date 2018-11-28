@@ -20,7 +20,13 @@ public interface EventRepository extends JpaRepository<Event, Long> {
     @Query(value="select * from event e where e.date_debut like :y",nativeQuery=true)
     public List<Event> chercherParDate(@Param("y")Date s);
     
-    @Query(value="SELECT * FROM  `event` WHERE  `event_type` like :y",nativeQuery=true)
-    public List<Event> getMatch(@Param("y")String s);
+    @Query(value="SELECT * FROM  `event` WHERE  `event_type`='MA'",nativeQuery=true)
+    public List<Event> getMatch();
+    
+    @Query(value="SELECT * FROM  `event` WHERE  `event_type`='EN'",nativeQuery=true)
+    public List<Event> getEntrainement();
+    
+    @Query(value="SELECT * FROM  `event` WHERE  `event_type`='AC'",nativeQuery=true)
+    public List<Event> getActivete();
 
 }

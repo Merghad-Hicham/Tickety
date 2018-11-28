@@ -12,10 +12,8 @@ import javax.persistence.Entity;
 public class Match extends Event {
 
 
-    @Column(nullable = false)
     private String equipe1;
 
-    @Column(nullable = false)
     private String equipe2;
 
     private String competition;

@@ -3,16 +3,15 @@ package com.example.demo.entities;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.Column;
+
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("EV")
+@DiscriminatorValue("EN")
 public class Entrainement extends Event {
 
 
-    @Column(nullable = false)
     private String equipe;
 
     public Entrainement() {

@@ -57,9 +57,21 @@ public class EventMetierImpl implements EventMetier {
 	}
 
 	@Override
-	public List<Event> getMatch(String s) {
+	public List<Event> getMatch() {
 		// TODO Auto-generated method stub
-		return eventRepositoy.getMatch(s);
+		return eventRepositoy.getMatch();
+	}
+
+	@Override
+	public List<Event> getEntrainement() {
+		// TODO Auto-generated method stub
+		return eventRepositoy.getEntrainement();
+	}
+
+	@Override
+	public List<Event> getActivete() {
+		// TODO Auto-generated method stub
+		return eventRepositoy.getActivete();
 	}
 
 }

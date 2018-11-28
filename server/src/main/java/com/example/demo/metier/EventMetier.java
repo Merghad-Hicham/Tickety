@@ -14,6 +14,8 @@ public interface EventMetier {
    public Event getEvent(Long id);
   public List<Event> chercherparDate(Date s);
    public boolean supprimEvent(Long id);
-   public List<Event> getMatch(String s);
+   public List<Event> getMatch();
+   public List<Event> getEntrainement();
+   public List<Event> getActivete();
     
 }
